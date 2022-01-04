@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="css\styles.css">
+      <style>
+          
+           #header-img {       
+               top: 0px;        
+               width: 450px;
+                 }
+             
+                 header {
+                  position: fixed;
+                  top: 0;
+                  min-height: 35px;
+                  padding: 0px 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #eee;
+                  width: 100%;
+                }                
+
+             /* For desktop: */
+             .col-1 {width: 8.33%;}
+             .col-2 {width: 16.66%;}
+             .col-3 {width: 25%;}
+             .col-4 {width: 33.33%;}
+             .col-5 {width: 41.66%;}
+             .col-6 {width: 50%;}
+             .col-7 {width: 58.33%;}
+             .col-8 {width: 66.66%;}
+             .col-9 {width: 75%;}
+             .col-10 {width: 83.33%;}
+             .col-11 {width: 91.66%;}
+             .col-12 {width: 100%;}
+           
+             @media only screen and (max-width: 768px) {
+              /* For mobile phones: */
+              [class*="col-"] {
+               width: 100%;
+                           }
+              }
+             .flex-container >div {
+                 background-color: rgb(114, 108, 108);
+                 width: 200px;
+                 margin: 5px;
+                 text-align: center;
+                 line-height: 55px;
+                 font-size: 30px;
+                 justify-content: center;
+             }
+             .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: grey;
+                padding-bottom: 20px;
+            }
+               body {
+                font-family: sans-serif;
+             }
+             .nav-link {
+                padding: 20px;
+                margin: 20px;
+             }
+             section {
+                 padding-bottom: 50px;
+                 padding-top: 40px;
+             }
+
+                .box {
+                 display: flex;
+                 justify-content: space-around;
+                  }
+
+                  .one {
+                    flex: 1;
+                  }
+            
+                  .two {
+                    flex: 1;
+                  }
+
+                  .three {
+                    flex: 1;
+                  }
+            
+  
+         </style>
+    </head>
+    <body>
+        
+            <center>
+                <header id="header">
+                <img id="header-img" src="https://t4.ftcdn.net/jpg/02/40/91/97/360_F_240919789_tYaJLpW1fzsZCnwukMeBqpOkOXu3ZqqJ.jpg">
+             
+             <nav id="nav-bar">
+                <a class="nav-link" href="#learn-more">Learn More</a>
+                <a class="nav-link" href="#log-in">Log-in</a>
+                <a class="nav-link" href="#buy-on-our-website">Buy now</a>
+             </nav>
+            </center>
+            <center>
+           
+             </header>
+            </center>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+        <section id="learn-more"> 
+            <center>
+            <h1>Organic Farm Mushrooms</h1>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/YXsR_vgD_7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </center>
+        </section>
+        <section id="log-in"> 
+            <center>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">  
+              <input id="email" type="email" placeholder="present email" name="email"> </input>
+              <input id="submit" type="submit"></input>
+          </form>
+             </center>
+        </section>
+        <section id="buy-on-our-website"> 
+            <center>
+            <div class="flex-container">
+                <div> <a href="amazon-affiliate-link">Buy on Amazon</a></div>
+                <div> <a href="mushroom-etc-affiliate-link">Buy on Mushrooms Etc</a></div>
+                <div> <a href="nuvedo-affiliate-link">Buy on Nuvedo</a></div>
+              </div>
+            </center>
+        </section>
+         
+        <section id="buy-at-nearest-store">
+            <center>
+            <div class="box">
+                <div class="one">One</div>
+                <div class="two">Two</div>
+                <div class="three">Three</div>
+              </div>
+            </center>
+        </section>
+              
+        
+    </body>
+    <Script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></Script>
+     
+    <script>
+        windows.onscroll = function() {myFunction()};
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+            console.log("scroll triggered")
+            if(window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    
+
+</html>
