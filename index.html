@@ -87,7 +87,73 @@
                     flex: 1;
                   }
             
-  
+                 .gradient {
+                   margin: 0 auto;
+                   width: calc(100% - 100px);
+                   text-align: center;
+                   position: relative;
+                   border-radius: 6px;
+                   box-sizing: border-box;
+                   color: white;
+                   display: block;
+                   z-index: 2;
+                   overflow: hidden;
+                   padding: 10px;
+                 }
+                 .gradient span {
+                   position: relative;
+                   z-index: 2;
+                   padding: 100px 0;
+                   font-size: 2rem;
+                   align-items: center;
+                   background: #000;
+                   border-radius: 3px;
+                   display: block;
+                   justify-content: center;
+                   box-sizing: border-box;
+                   height: 100%;
+                 }
+                 .gradient:before {
+                   content: "";
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   width: 200%;
+                   height: 100%;
+                   background: linear-gradient(
+                     110deg,
+                     #4de94c,
+                     #f60000,
+                     #cd00cd,
+                     #ff8c00,
+                     #ffee00,
+                     #18d43f,
+                     /* more colors*/ #4de94c,
+                     #f60000,
+                     #cd00cd,
+                     #ff8c00,
+                     #ffee00,
+                     #4de94c,
+                     #f60000,
+                     #cd00cd,
+                     #ff8c00,
+                     #ffee00,
+                     #4de94c,
+                     #f60000,
+                     #cd00cd
+                   );
+                 /*   background-size: 100% 100%; */
+                 }
+                 
+                 .gradient:before {
+                   animation: gradient-animate 2s linear infinite;
+                 }
+                 
+                 @keyframes gradient-animate {
+                   to {
+                     transform: translateX(-50%);
+                   }
+                 }
          </style>
     </head>
     <body>
@@ -121,7 +187,9 @@
             <br>
             <br>
             <br>
-            
+            <div class="gradient">
+                <span>Animating border gradient</span>
+            </div>
         <section id="learn-more"> 
             <center>
             <h1>Organic Farm Mushrooms</h1>
@@ -174,7 +242,10 @@
             }
         }
     </script>
-
+   
+       <script type="module">
+         import tailwindcss from 'https://cdn.skypack.dev/tailwindcss';
+       </script>
     
 
 </html>
